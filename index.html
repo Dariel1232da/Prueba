@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Pintor</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(90deg, #003a72 50%, #c8102e 50%);
+        }
+        .logo {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .logo img {
+            width: 200px;
+        }
+        .title {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .option {
+            text-align: center;
+            color: white;
+        }
+        .option img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .exit {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo_Pinturas_Americanas.png" alt="Pinturas Americanas Logo">
+        </div>
+        <div class="title">PLAN PINTOR</div>
+        <div class="options">
+            <div class="option">
+                <img src="pinturas_americanas.png" alt="Pinturas Americanas">
+                <div>PINTURAS AMERICANAS</div>
+            </div>
+            <div class="option">
+                <img src="pintores.png" alt="Pintores">
+                <div>PINTORES</div>
+            </div>
+        </div>
+        <a href="#" class="exit">Salir</a>
+    </div>
+</body>
+</html>
