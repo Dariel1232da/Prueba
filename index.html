@@ -12,24 +12,26 @@
             background-color: #f0f0f0;
         }
         .container {
+            width: 100vw;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            background: linear-gradient(0deg, #c8102e 50%, #003a72 50%);
+            background: linear-gradient(45deg, #c8102e 50%, #003a72 50%);
             padding: 20px;
         }
-        
+
         .logo {
             margin-bottom: 20px;
         }
         .logo img {
-            max-width: 200px;
+            max-width: 300px;
+            width: 100%;
         }
         .title {
             color: white;
-            font-size: 2rem;
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 40px;
             text-align: center;
@@ -38,7 +40,7 @@
             display: flex;
             flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
         }
         .button {
             display: flex;
@@ -49,11 +51,12 @@
             background: none;
             cursor: pointer;
             color: white;
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
         .button img {
-            width: 100px;
-            height: 100px;
+            max-width: 150px;
+            width: 100%;
+            height: auto;
             margin-bottom: 10px;
             transition: transform 0.2s;
         }
@@ -64,54 +67,45 @@
             transform: scale(1);
         }
         .button span {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: bold;
+            text-align: center;
         }
         .exit {
             position: relative;
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: white;
             text-decoration: none;
             margin-top: 20px;
         }
 
         /* Estilos específicos para pantallas grandes */
-        @media (min-width: 768px) {
-            .container {
-                padding: 50px;
-            }
-            .logo img {
-                max-width: 300px;
-            }
+        @media (min-width: 1024px) {
             .title {
-                font-size: 3rem;
+                font-size: 4rem;
             }
             .options {
-                gap: 60px;
+                gap: 80px;
             }
             .button img {
-                width: 150px;
-                height: 150px;
+                max-width: 200px;
             }
             .button span {
-                font-size: 1.2rem;
-            }
-            .exit {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
         }
 
-        /* Estilos específicos para pantallas muy pequeñas */
-        @media (max-width: 480px) {
+        /* Estilos específicos para pantallas pequeñas */
+        @media (max-width: 768px) {
             .title {
-                font-size: 1.5rem;
+                font-size: 2rem;
+                margin-bottom: 20px;
             }
             .button img {
-                width: 80px;
-                height: 80px;
+                max-width: 120px;
             }
             .button span {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
     </style>
