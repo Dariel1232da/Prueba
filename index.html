@@ -52,7 +52,9 @@
             cursor: pointer;
             color: white;
             font-size: 1.2rem;
+            text-decoration: none; /* Asegura que los enlaces no tengan subrayado */
         }
+        
         .button img {
             max-width: 150px;
             width: 100%;
@@ -118,10 +120,11 @@
         <div class="title">PLAN PINTOR</div>
         <div class="options">
             <!-- Botón 1 -->
-            <button class="button" onclick="alert('La amo mi amor, lo haces genial, bebé hermosa.')">
+            <a href="login.html" class="button">
                 <img src="pinturas_americanas.png" alt="Pinturas Americanas">
                 <span>PINTURAS AMERICANAS</span>
-            </button>
+            </a>
+            
             <!-- Botón 2 -->
             <button class="button" onclick="alert('Recuerde siempre que es muy especial y que puede con todo, la amo, mi niña bonita.')">
                 <img src="pintores.png" alt="Pintores">
