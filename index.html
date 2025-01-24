@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan Pintor</title>
     <style>
+        /* Configuración global */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
         }
         .container {
-            width: 100vw;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
             background: linear-gradient(0deg, #c8102e 50%, #003a72 50%);
+            padding: 20px;
         }
         
         .logo {
             margin-bottom: 20px;
-            text-align: center;
         }
         .logo img {
-            width: 200px;
+            max-width: 200px;
         }
         .title {
             color: white;
@@ -36,11 +36,9 @@
         }
         .options {
             display: flex;
+            flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
             justify-content: center;
             gap: 40px;
-        }
-        .option {
-            text-align: center;
         }
         .button {
             display: flex;
@@ -70,11 +68,51 @@
             font-weight: bold;
         }
         .exit {
-            position: absolute;
-            bottom: 20px;
+            position: relative;
             font-size: 1rem;
             color: white;
             text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* Estilos específicos para pantallas grandes */
+        @media (min-width: 768px) {
+            .container {
+                padding: 50px;
+            }
+            .logo img {
+                max-width: 300px;
+            }
+            .title {
+                font-size: 3rem;
+            }
+            .options {
+                gap: 60px;
+            }
+            .button img {
+                width: 150px;
+                height: 150px;
+            }
+            .button span {
+                font-size: 1.2rem;
+            }
+            .exit {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Estilos específicos para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.5rem;
+            }
+            .button img {
+                width: 80px;
+                height: 80px;
+            }
+            .button span {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
