@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de Inicio</title>
+    <title>Pantalla de Registro</title>
     <style>
         body {
             margin: 0;
@@ -18,16 +18,16 @@
             width: 100vw;
             height: 100vh;
             background-color: white;
+            padding-bottom: 40px; /* Espacio extra en la parte inferior */
         }
         .header {
             width: 100%;
             height: 35%;
-            background-color: #003a72;
+            background-color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            border-bottom-left-radius: 1px; /*para que la primera esquina visualmente sea cuadrado ENCABEZADO AZUL*/
-            border-bottom-right-radius: 50px;
+            border-bottom: 2px solid #003a72;
         }
         .header img {
             max-width: 200px;
@@ -39,21 +39,25 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 40px; /* Más espacio debajo del formulario */
         }
         .content h1 {
             font-size: 2rem;
-            color: #003a72;
+            color: #000;
             margin-bottom: 20px;
+            font-weight: bold;
+            text-align: center;
         }
         .form-group {
             width: 100%;
             margin-bottom: 20px;
         }
         .form-group label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #555;
             display: block;
             margin-bottom: 5px;
+            font-weight: bold;
         }
         .form-group input {
             width: 100%;
@@ -67,7 +71,6 @@
             border-color: #003a72;
             outline: none;
             box-shadow: 0 0 5px rgba(0, 86, 179, 0.5);
-
         }
         .button {
             width: 100%;
@@ -83,45 +86,48 @@
         .button:hover {
             background-color: #002654;
         }
-        .links {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .links a {
+        .back-icon {
+            position: absolute;
+            bottom: 40px; /* Más espacio debajo del ícono de retroceso */
+            left: 20px;
+            font-size: 1.5rem;
             color: #003a72;
-            text-decoration: none;
-            margin-left: 5px;
-        }
-        .links a:hover {
-            text-decoration: underline;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Encabezado con fondo azul y logo -->
+        <!-- Encabezado con logo -->
         <div class="header">
             <img src="Logo_Pinturas_Americanas.png" alt="Logo Pinturas Americanas">
         </div>
 
         <!-- Contenido principal -->
         <div class="content">
-            <h1>INICIAR SESIÓN</h1>
+            <h1>REGÍSTRATE</h1>
             <div class="form-group">
-                <label for="usuario">Usuario</label>
-                <input type="text" id="usuario" placeholder="Ingresa tu usuario">
+                <label for="nombre">NOMBRE</label>
+                <input type="text" id="nombre" placeholder="Ingresa tu nombre">
             </div>
             <div class="form-group">
-                <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" placeholder="Ingresa tu contraseña">
+                <label for="correo">CORREO</label>
+                <input type="email" id="correo" placeholder="Ingresa tu correo">
             </div>
-            <button class="button">Iniciar Sesión</button>
-            <div class="links">
-                <p>¿No recuerdas la contraseña? <a href="#">Recupérala</a></p>
-                <p>¿No tienes cuenta? <a href="registrate.html">Regístrate</a></p>
+            <div class="form-group">
+                <label for="contrasena">CONTRASEÑA</label>
+                <input type="password" id="contrasena" placeholder="Crea una contraseña">
             </div>
+            <div class="form-group">
+                <label for="usuario">USUARIO</label>
+                <input type="text" id="usuario" placeholder="Elige un nombre de usuario">
+            </div>
+            <button class="button">INICIAR SESIÓN</button>
+        </div>
+
+        <!-- Icono de retroceso -->
+        <div class="back-icon">
+            &#8592;
         </div>
     </div>
 </body>
